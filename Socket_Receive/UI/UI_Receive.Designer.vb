@@ -23,28 +23,19 @@ Partial Class UI_Receive
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UI_Receive))
-        Me.AxWinsock1 = New AxMSWinsockLib.AxWinsock()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.LB_Data = New System.Windows.Forms.ListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LB_Log = New System.Windows.Forms.ListBox()
         Me.lbl_request_connect = New System.Windows.Forms.Label()
-        Me.LB_Data = New System.Windows.Forms.ListBox()
-        CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.AxWinsock1 = New AxMSWinsockLib.AxWinsock()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'AxWinsock1
-        '
-        Me.AxWinsock1.Enabled = True
-        Me.AxWinsock1.Location = New System.Drawing.Point(491, 12)
-        Me.AxWinsock1.Name = "AxWinsock1"
-        Me.AxWinsock1.OcxState = CType(resources.GetObject("AxWinsock1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWinsock1.Size = New System.Drawing.Size(28, 28)
-        Me.AxWinsock1.TabIndex = 0
         '
         'lbl_status
         '
@@ -80,6 +71,19 @@ Partial Class UI_Receive
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Data"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'LB_Data
+        '
+        Me.LB_Data.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LB_Data.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.LB_Data.FormattingEnabled = True
+        Me.LB_Data.ItemHeight = 16
+        Me.LB_Data.Location = New System.Drawing.Point(6, 6)
+        Me.LB_Data.Name = "LB_Data"
+        Me.LB_Data.Size = New System.Drawing.Size(487, 164)
+        Me.LB_Data.TabIndex = 0
         '
         'TabPage2
         '
@@ -117,35 +121,33 @@ Partial Class UI_Receive
         Me.lbl_request_connect.TabIndex = 3
         Me.lbl_request_connect.Text = "Request Connection"
         '
-        'LB_Data
+        'AxWinsock1
         '
-        Me.LB_Data.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LB_Data.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.LB_Data.FormattingEnabled = True
-        Me.LB_Data.ItemHeight = 16
-        Me.LB_Data.Location = New System.Drawing.Point(6, 6)
-        Me.LB_Data.Name = "LB_Data"
-        Me.LB_Data.Size = New System.Drawing.Size(487, 164)
-        Me.LB_Data.TabIndex = 0
+        Me.AxWinsock1.Enabled = True
+        Me.AxWinsock1.Location = New System.Drawing.Point(491, 12)
+        Me.AxWinsock1.Name = "AxWinsock1"
+        Me.AxWinsock1.OcxState = CType(resources.GetObject("AxWinsock1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWinsock1.Size = New System.Drawing.Size(28, 28)
+        Me.AxWinsock1.TabIndex = 0
         '
         'UI_Receive
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(531, 284)
         Me.Controls.Add(Me.lbl_request_connect)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.lbl_status)
         Me.Controls.Add(Me.AxWinsock1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "UI_Receive"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UI_Receive"
-        CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
