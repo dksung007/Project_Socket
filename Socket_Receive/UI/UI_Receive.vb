@@ -2,7 +2,7 @@
     Private _port As Integer = 9100
     Private iSockets As Integer = 0
     Private sRequestID As String
-
+    Private CL_Common As CL_Common = New CL_Common()
     Private Sub UI_Receive_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'CL_Write_Log.writeLog("Open Program")
         AxWinsock1.LocalPort = _port
@@ -57,4 +57,8 @@
         CL_Write_Log.writeLog(Now & " " & _msg)
     End Sub
 
+    Private Sub btn_config_Click(sender As Object, e As EventArgs) Handles btn_config.Click
+        CL_Common.UIConfig = New UIConfig()
+        CL_Common.UIConfig.ShowDialog()
+    End Sub
 End Class

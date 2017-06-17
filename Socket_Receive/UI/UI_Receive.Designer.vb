@@ -31,6 +31,7 @@ Partial Class UI_Receive
         Me.LB_Log = New System.Windows.Forms.ListBox()
         Me.lbl_request_connect = New System.Windows.Forms.Label()
         Me.AxWinsock1 = New AxMSWinsockLib.AxWinsock()
+        Me.btn_config = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -130,12 +131,23 @@ Partial Class UI_Receive
         Me.AxWinsock1.Size = New System.Drawing.Size(28, 28)
         Me.AxWinsock1.TabIndex = 0
         '
+        'btn_config
+        '
+        Me.btn_config.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_config.Location = New System.Drawing.Point(410, 13)
+        Me.btn_config.Name = "btn_config"
+        Me.btn_config.Size = New System.Drawing.Size(75, 23)
+        Me.btn_config.TabIndex = 4
+        Me.btn_config.Text = "Config"
+        Me.btn_config.UseVisualStyleBackColor = True
+        '
         'UI_Receive
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(531, 284)
+        Me.Controls.Add(Me.btn_config)
         Me.Controls.Add(Me.lbl_request_connect)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.lbl_status)
@@ -161,4 +173,5 @@ Partial Class UI_Receive
     Friend WithEvents lbl_request_connect As Label
     Friend WithEvents LB_Log As ListBox
     Friend WithEvents LB_Data As ListBox
+    Friend WithEvents btn_config As Button
 End Class
